@@ -1,0 +1,217 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #0f7f9b;
+  --blue: #272ad1;
+  --secondary: #339107;
+  --text: #1f2346;
+  --white: #d4dbe5;
+  --red: #c40808;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  padding: 50px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  position: relative;
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: height 0.6s ease;
+  padding-bottom: 100px;
+  box-sizing: border-box; 
+  height: 750px !important;/* Make sure padding is inside the width */
+}
+
+.wrapper {
+  margin: 1.25rem 1.75rem;
+  min-height: 100%;
+  
+}
+.wrapper h2 {
+  font-weight: 600;
+  font-size: 1.31rem;
+  border-bottom: 1px solid var(--white);
+  margin-bottom: 1rem;
+}
+/* password error text */
+.wrapper p.password_error {
+  color: var(--red);
+  height: 10px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Inputs */
+.input_wrapper {
+  position: relative;
+  padding: 15px 0 0;
+  margin-bottom: 1.5rem;
+}
+
+/* error text */
+.input_wrapper p {
+  color: var(--red);
+  height: 10px;
+}
+
+.input_field {
+  font-size: 1.2rem;
+  color: var(--text);
+  padding: 6px 0px;
+  padding-right: 32px;
+  padding-bottom: 0.2rem;
+  line-height: 2rem;
+  height: 2rem;
+  outline: 0px;
+  border: 0px;
+  width: 100%;
+  vertical-align: middle;
+  border-bottom: 3px solid var(--text);
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.input_field::placeholder {
+  color: transparent;
+}
+
+.input_label,
+.input_field:focus ~ .input_label {
+  position: absolute;
+  top: -0.5rem;
+  display: block;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.input_field:focus ~ .input_label {
+  color: var(--blue);
+}
+
+.input_field:focus {
+  border-bottom: 3px solid var(--blue);
+}
+
+.input_field:focus ~ svg {
+  stroke: var(--blue);
+}
+
+.input_label {
+  user-select: none;
+}
+
+.input_icon {
+  position: absolute;
+  right: -14px;
+  bottom: -5px;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  cursor: pointer;
+}
+/* password requirement */
+.requirement_met {
+  color: var(--secondary);
+  text-decoration: line-through;
+}
+.password_requirement {
+  margin: -1rem 0 1.5rem 0;
+}
+
+/* password match */
+.wrapper p.password_match_wrapper {
+  margin-top: -1.5rem;
+}
+.wrapper p span.password_match {
+  color: var(--secondary);
+}
+.wrapper p span.password_not_match {
+  color: var(--red);
+}
+
+
+.wrapper button {
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 1.2rem;
+  vertical-align: middle;
+  cursor: pointer;
+  box-sizing: border-box; /* Ensure padding is inside the width */
+}
+
+.wrapper button:hover {
+  opacity: 90%;
+}
+
+
+/* submitted user info  */
+.user_info_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.user_info_wrapper p {
+  font-size: large;
+}
+
+/* Loader */
+.loader_wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  font-size: 30px;
+  color: var(--text);
+  display: inline-block;
+  font-weight: 500;
+  position: relative;
+}
+.loader:after {
+  content: '';
+  height: 4px;
+  width: 0%;
+  display: block;
+  background: var(--blue);
+  animation: 5s lineGrow linear infinite;
+}
+
+@keyframes lineGrow {
+  to {
+    width: 100%;
+  }
+}

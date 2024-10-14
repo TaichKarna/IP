@@ -1,0 +1,27 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: last baseline;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+.button{
+  padding: 5px 15px;
+  margin: 30px 10px;
+  border-radius: 7px;
+  transition: transform 0.2s, background-color 2s;
+  cursor: pointer;
+}
+.button:hover {
+  transform: translateY(-3px) translateX(3px);
+  background-color: rgb(164, 211, 195); /* Change to desired hover color */
+}
+.try{
+  width: 100vw;
+  height: 100vh;
+}
